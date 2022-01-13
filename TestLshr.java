@@ -5,7 +5,7 @@
  */
 public class TestLshr {
     /**
-     * Arithmetic shift right long.
+     * Logical shift right long.
      * By the way, the correct result of examples in the following are 250 and -250.
      */
     public static void main(String[] args) {
