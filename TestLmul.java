@@ -4,11 +4,11 @@
  * @version 1.0
  */
 
-public class TestLsub {
+public class TestLmul {
     /**
      * @return By the way, the correct result of examples in the following is 10000.
      */
-    public static long lsub(long m1, long m2){
+    public static long lmul(long m1, long m2){
         return m1*m2;
     }
 
