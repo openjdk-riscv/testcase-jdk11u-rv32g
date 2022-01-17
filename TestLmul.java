@@ -13,6 +13,6 @@ public class TestLsub {
     }
 
     public static void main(String[] args) {
-        System.out.println(lsub(100L,100L));
+        System.out.println(lmul(100L,100L));
     }
 }
