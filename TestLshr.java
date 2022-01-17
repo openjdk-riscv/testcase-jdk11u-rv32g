@@ -12,8 +12,8 @@ public class TestLshr {
         long c = 1000L;
         long d = -1000L;
         long a=2L;
-        long b1=c>>>a;
-        long b2=d>>>a;
+        long b1=c>>a;
+        long b2=d>>a;
         System.out.println(b1);
         System.out.println(b2);
     }
