@@ -1,3 +1,5 @@
+import util.Assert;
+
 /**
  * Test case for lshl
  * @author Xiang Zhang
@@ -16,5 +18,8 @@ public class TestLshl {
         long b2=d<<a;
         System.out.println(b1);
         System.out.println(b2);
+
+        Assert.isTrue(b1 == 4000, "test lshl error");
+        Assert.isTrue(b2 == -4000, "test lshl error");
     }
 }

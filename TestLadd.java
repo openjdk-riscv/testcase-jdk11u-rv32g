@@ -1,3 +1,5 @@
+import util.Assert;
+
 /**
  * Test case for add between long
  * @author Xiang Zhang
@@ -14,5 +16,7 @@ public class TestLadd {
 
     public static void main(String[] args) {
         System.out.println(ladd(100L,100L));
+        long result = ladd(100L, 100L);
+        Assert.isTrue(result == 200,"test ladd error");
     }
 }

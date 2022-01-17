@@ -1,3 +1,5 @@
+import util.Assert;
+
 /**
  * Test case for lmul
  * @author Xiang Zhang
@@ -14,5 +16,6 @@ public class TestLmul {
 
     public static void main(String[] args) {
         System.out.println(lmul(100L,100L));
+        Assert.isTrue(lmul(100L,100L) == 10000, "test lmul error");
     }
 }

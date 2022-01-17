@@ -1,3 +1,5 @@
+import util.Assert;
+
 /**
  * Test case for lsub
  * @author Xiang Zhang
@@ -14,5 +16,6 @@ public class TestLsub {
 
     public static void main(String[] args) {
         System.out.println(lsub(1000L,100L));
+        Assert.isTrue(lsub(1000L, 100L) == 900, "test lsub error");
     }
 }

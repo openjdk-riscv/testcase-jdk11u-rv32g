@@ -1,3 +1,5 @@
+import util.Assert;
+
 /**
  * Test case for ldiv
  * @author Dingli Zhang
@@ -16,5 +18,7 @@ public class TestLdiv {
 
     public static void main(String[] args) {
         System.out.println(ldiv(100000000000L,10000000000L));
+        final long ldiv = ldiv(100000000000L, 10000000000L);
+        Assert.isTrue(ldiv == 10,"test ldiv error");
     }
 }

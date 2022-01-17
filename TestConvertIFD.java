@@ -1,3 +1,5 @@
+import util.Assert;
+
 /**
  * Test case for convert between long and float/double
  * @author Xiang Zhang
@@ -29,5 +31,11 @@ public class TestConvertIFD {
         System.out.println("test i2d in: "+d+" out: "+ (double)d);
         System.out.println("test i2f in: "+d+" out: "+ (float)d);
 
+        Assert.isTrue((int)a == -256, "test l2i error");
+        Assert.isTrue((int)b == -2147483648,"test f2i error");
+        Assert.isTrue((int)c == -2147483648,"test d2i error");
+        Assert.isTrue((long)d == 10,"test i2l error");
+        Assert.isTrue((double)d == 10.0,"test i2d error");
+        Assert.isTrue((float)d == 10.0,"test i2f error");
     }
 }
