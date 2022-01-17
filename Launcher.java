@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 public class Launcher {
 
     // notice we need add test case to testCase array.
-    static String[] testCase = new String[] {
+    final static String[] TEST_CASE = new String[] {
         "HelloWorld",
         "TestArrayOverflow",
         "TestConvertIFD",
@@ -26,7 +26,7 @@ public class Launcher {
 
     public static void main(String[] args) throws Exception {
         System.out.println("run test start...");
-        for (String str : testCase) {
+        for (String str : TEST_CASE) {
             runTest(str);
         }
         System.out.println("success run all test...");
