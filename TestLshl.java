@@ -3,7 +3,7 @@
  * @author Xiang Zhang
  * @version 1.0
  */
-public class TestLshr {
+public class TestLshl {
     /**
      * Logical shift left long.
      * By the way, the correct result of examples in the following are 4000 and -4000.
