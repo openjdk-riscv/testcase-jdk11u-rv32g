@@ -1,5 +1,3 @@
-import util.Assert;
-
 /**
  * Test case for lshr
  * @author Xiang Zhang

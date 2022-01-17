@@ -1,5 +1,3 @@
-import util.Assert;
-
 /**
  * Test case for convert between long and float/double
  * @author Xiang Zhang

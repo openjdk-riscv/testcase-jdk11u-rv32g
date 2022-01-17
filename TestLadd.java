@@ -1,5 +1,3 @@
-import util.Assert;
-
 /**
  * Test case for add between long
  * @author Xiang Zhang

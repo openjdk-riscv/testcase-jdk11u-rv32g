@@ -1,5 +1,3 @@
-import util.Assert;
-
 /**
  * Test case for lrem
  * @author Xiang Zhang

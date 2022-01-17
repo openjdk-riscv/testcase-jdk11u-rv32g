@@ -1,5 +1,3 @@
-import util.Assert;
-
 public class TestArrayOverflow {
     public static void main(String[] args) {
         try {

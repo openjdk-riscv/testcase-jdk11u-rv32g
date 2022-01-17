@@ -1,5 +1,3 @@
-package util;
-
 public class Assert {
 
     public static void isTrue(boolean expression, String message) {

@@ -1,5 +1,3 @@
-import util.Assert;
-
 public class TestLastore {
     public static void main(String[] args) {
         long elements[] = new long[2];
