@@ -16,5 +16,8 @@ public class TestLshr {
         long b2=d>>a;
         System.out.println(b1);
         System.out.println(b2);
+
+        Assert.isTrue(b1 == 250,"test lshr error");
+        Assert.isTrue(b2 == -250,"test lshr error");
     }
 }

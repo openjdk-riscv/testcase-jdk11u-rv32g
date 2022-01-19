@@ -22,5 +22,10 @@ public class TestConvertLFD {
         System.out.println("test l2d in: "+a+" out: "+ (double)a);
         System.out.println("test f2l in: "+b+" out: "+ (long)b);
         System.out.println("test d2l in: "+c+" out: "+ (long)c);
+
+        Assert.isTrue((float)a == -6.4424509E10F, "test l2f error");
+        Assert.isTrue((double)a == -6.4424509696E10, "test l2d error");
+        Assert.isTrue((long)b == -64424509440L, "test f2l error");
+        Assert.isTrue((long)c == -64424509696L, "test d2l error");
     }
 }

@@ -14,5 +14,6 @@ public class TestLneg {
 
     public static void main(String[] args) {
         System.out.println(lneg(100L));
+        Assert.isTrue(lneg(100L) == -100, "test lneg error");
     }
 }

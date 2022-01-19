@@ -12,5 +12,6 @@ public class TestLushr {
         long a = -1L;
         int b = -68;
         System.out.println(a>>>b);
+        Assert.isTrue(a>>>b == 15, "test lushr error");
     }
 }

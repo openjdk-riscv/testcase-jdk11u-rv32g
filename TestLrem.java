@@ -16,5 +16,7 @@ public class TestLrem {
 
     public static void main(String[] args) {
         System.out.println(lrem(100000000000L,100000000L));
+        final long lrem = lrem(100000000000L, 100000000L);
+        Assert.isTrue(lrem == 0,"test lrem error");
     }
 }
