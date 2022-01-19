@@ -21,7 +21,11 @@ public class Launcher {
         "TestLshr",
         "TestLsub",
         "TestLushr",
-        "TestLxor"
+        "TestLxor",
+        "TestArrayCopy",
+        "TestByteBuffer",
+        "TestJavac",
+        "TestReflect"
     };
 
     public static void main(String[] args) throws Exception {
