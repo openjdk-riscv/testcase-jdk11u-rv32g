@@ -25,7 +25,8 @@ public class Launcher {
         "TestArrayCopy",
         "TestByteBuffer",
         "TestJavac",
-        "TestReflect"
+        "TestReflect",
+        "TestReflectInvoke"
     };
 
     public static void main(String[] args) throws Exception {
