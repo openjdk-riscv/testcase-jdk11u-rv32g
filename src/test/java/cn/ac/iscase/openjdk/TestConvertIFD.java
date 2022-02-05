@@ -1,10 +1,15 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for convert between long and float/double
  * @author Xiang Zhang
  * @version 1.0
  */
 public class TestConvertIFD {
-        /**
+    /**
      * Convert between int and float/double
      * By the way, the correct result of examples in the following is:
      *
@@ -15,7 +20,8 @@ public class TestConvertIFD {
      * test i2d in: 10 out: 10.0
      * test i2f in: 10 out: 10.0
      */
-    public static void main(String[] args) {
+    @Test
+    public void testConvertIFD() {
         long a = 0xFFFFFFF0FFFFFF00L;
         float b = -64424509696F;
         double c = -64424509696D;
@@ -29,11 +35,11 @@ public class TestConvertIFD {
         System.out.println("test i2d in: "+d+" out: "+ (double)d);
         System.out.println("test i2f in: "+d+" out: "+ (float)d);
 
-        Assert.isTrue((int)a == -256, "test l2i error");
-        Assert.isTrue((int)b == -2147483648,"test f2i error");
-        Assert.isTrue((int)c == -2147483648,"test d2i error");
-        Assert.isTrue((long)d == 10,"test i2l error");
-        Assert.isTrue((double)d == 10.0,"test i2d error");
-        Assert.isTrue((float)d == 10.0,"test i2f error");
+        Assert.assertTrue((int) a == -256);
+        Assert.assertTrue((int)b == -2147483648);
+        Assert.assertTrue((int)c == -2147483648);
+        Assert.assertTrue((long)d == 10);
+        Assert.assertTrue((double)d == 10.0);
+        Assert.assertTrue((float)d == 10.0);
     }
 }

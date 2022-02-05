@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for add between long
  * @author Xiang Zhang
@@ -12,9 +17,10 @@ public class TestLadd {
         return m1+m2;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testLadd() {
         System.out.println(ladd(100L,100L));
         long result = ladd(100L, 100L);
-        Assert.isTrue(result == 200,"test ladd error");
+        Assert.assertTrue(result == 200);
     }
 }

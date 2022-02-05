@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for convert between long and float/double
  * @author Dingli Zhang
@@ -13,7 +18,8 @@ public class TestConvertLFD {
      * test f2l in: -6.4424509E10 out: -64424509440
      * test d2l in: -6.4424509696E10 out: -64424509696
      */
-    public static void main(String[] args) {
+    @Test
+    public void testConvertLFD() {
         long a = 0xFFFFFFF0FFFFFF00L;
         float b = -64424509696F;
         double c = -64424509696D;
@@ -23,9 +29,9 @@ public class TestConvertLFD {
         System.out.println("test f2l in: "+b+" out: "+ (long)b);
         System.out.println("test d2l in: "+c+" out: "+ (long)c);
 
-        Assert.isTrue((float)a == -6.4424509E10F, "test l2f error");
-        Assert.isTrue((double)a == -6.4424509696E10, "test l2d error");
-        Assert.isTrue((long)b == -64424509440L, "test f2l error");
-        Assert.isTrue((long)c == -64424509696L, "test d2l error");
+        Assert.assertTrue((float)a == -6.4424509E10F);
+        Assert.assertTrue((double)a == -6.4424509696E10);
+        Assert.assertTrue((long)b == -64424509440L);
+        Assert.assertTrue((long)c == -64424509696L);
     }
 }

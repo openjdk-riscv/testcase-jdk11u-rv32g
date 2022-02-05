@@ -1,14 +1,20 @@
+package cn.ac.iscase.openjdk;
+
 import java.nio.ByteBuffer;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * Test allocate direct memory.
  */
 public class TestByteBuffer {
-    public static void main(String[] args) {
+
+    @Test
+    public void testByteBufferSize() {
 
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(8192);
 
         System.out.println(byteBuffer.capacity());
-        Assert.isTrue(byteBuffer.capacity() == 8192,"test byteBuffer error");
+        Assert.assertTrue(byteBuffer.capacity() == 8192);
     }
 }

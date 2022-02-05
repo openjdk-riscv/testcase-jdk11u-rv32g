@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lshl
  * @author Xiang Zhang
@@ -8,7 +13,8 @@ public class TestLshl {
      * Logical shift left long.
      * By the way, the correct result of examples in the following are 4000 and -4000.
      */
-    public static void main(String[] args) {
+    @Test
+    public void testLshl() {
         long c = 1000L;
         long d = -1000L;
         long a=2L;
@@ -17,7 +23,7 @@ public class TestLshl {
         System.out.println(b1);
         System.out.println(b2);
 
-        Assert.isTrue(b1 == 4000, "test lshl error");
-        Assert.isTrue(b2 == -4000, "test lshl error");
+        Assert.assertTrue("test lshl error", b1 == 4000);
+        Assert.assertTrue("test lshl error", b2 == -4000);
     }
 }

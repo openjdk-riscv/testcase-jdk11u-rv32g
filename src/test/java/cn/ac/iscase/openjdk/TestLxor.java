@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for xor between long
  *
@@ -13,8 +18,9 @@ public class TestLxor {
         return m1 ^ m2;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testLxor() {
         System.out.println(lxor(1L, -1L));
-        Assert.isTrue(lxor(1L, -1L) == -2, "test lxor error");
+        Assert.assertTrue(lxor(1L, -1L) == -2);
     }
 }

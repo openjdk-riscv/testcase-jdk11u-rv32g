@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lshr
  * @author Xiang Zhang
@@ -8,7 +13,8 @@ public class TestLshr {
      * Logical shift right long.
      * By the way, the correct result of examples in the following are 250 and -250.
      */
-    public static void main(String[] args) {
+    @Test
+    public void testLshr() {
         long c = 1000L;
         long d = -1000L;
         long a=2L;
@@ -17,7 +23,7 @@ public class TestLshr {
         System.out.println(b1);
         System.out.println(b2);
 
-        Assert.isTrue(b1 == 250,"test lshr error");
-        Assert.isTrue(b2 == -250,"test lshr error");
+        Assert.assertTrue("test lshr error", b1 == 250);
+        Assert.assertTrue("test lshr error", b2 == -250);
     }
 }

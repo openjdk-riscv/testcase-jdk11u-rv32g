@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lsub
  * @author Xiang Zhang
@@ -12,8 +17,9 @@ public class TestLsub {
         return m1-m2;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testLsub() {
         System.out.println(lsub(1000L,100L));
-        Assert.isTrue(lsub(1000L, 100L) == 900, "test lsub error");
+        Assert.assertTrue("test lsub error", lsub(1000L, 100L) == 900);
     }
 }

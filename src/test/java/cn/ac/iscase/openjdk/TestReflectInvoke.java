@@ -1,23 +1,21 @@
+package cn.ac.iscase.openjdk;
+
 import java.lang.reflect.Method;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * Test reflect invoke
  */
 public class TestReflectInvoke {
-    public static void main(String[] args)  {
-        try {
-            TestReflectInvoke.test();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 
-    public static void test() {
+    @Test
+    public void test() {
         try {
             Method pid = TestReflectInvoke.class.getMethod("aa");
             final Long result = (Long)pid.invoke(null);
             System.out.println(result);
-            Assert.isTrue(result==99999,"assert result error");
+            Assert.assertTrue("assert result error", result==99999);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -1,11 +1,18 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 public class TestArrayOverflow {
-    public static void main(String[] args) {
+
+    @Test
+    public void testArrayOverflow() {
         try {
             long longArray[] = new long[2];
             System.out.println(longArray[3]);
         } catch (Exception e) {
             boolean ex  = e instanceof ArrayIndexOutOfBoundsException;
-            Assert.isTrue(ex,"test array overflow");
+            Assert.assertTrue("test array overflow", ex);
         }
     }
 }

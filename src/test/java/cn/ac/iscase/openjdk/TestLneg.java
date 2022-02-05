@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lneg
  * @author Xiang Zhang
@@ -12,8 +17,9 @@ public class TestLneg {
         return -m;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testLneg() {
         System.out.println(lneg(100L));
-        Assert.isTrue(lneg(100L) == -100, "test lneg error");
+        Assert.assertTrue("test lneg error", lneg(100L) == -100);
     }
 }

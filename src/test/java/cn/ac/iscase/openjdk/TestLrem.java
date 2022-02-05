@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lrem
  * @author Xiang Zhang
@@ -14,9 +19,11 @@ public class TestLrem {
         return dividend%divisor;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testLrem() {
         System.out.println(lrem(100000000000L,100000000L));
         final long lrem = lrem(100000000000L, 100000000L);
-        Assert.isTrue(lrem == 0,"test lrem error");
+
+        Assert.assertTrue(lrem == 0);
     }
 }

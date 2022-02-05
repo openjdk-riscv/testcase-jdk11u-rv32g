@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lush
  * @author Dingli Zhang
@@ -8,10 +13,11 @@ public class TestLushr {
      * Logical shift right long.
      * By the way, the correct result of examples in the following is 15.
      */
-    public static void main(String[] args) {
+    @Test
+    public void testLushr() {
         long a = -1L;
         int b = -68;
         System.out.println(a>>>b);
-        Assert.isTrue(a>>>b == 15, "test lushr error");
+        Assert.assertTrue("test lushr error", a>>>b == 15);
     }
 }

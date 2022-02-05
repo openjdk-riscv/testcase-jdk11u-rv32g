@@ -1,3 +1,8 @@
+package cn.ac.iscase.openjdk;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * Test case for lmul
  * @author Xiang Zhang
@@ -12,8 +17,9 @@ public class TestLmul {
         return m1*m2;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testLmul() {
         System.out.println(lmul(100L,100L));
-        Assert.isTrue(lmul(100L,100L) == 10000, "test lmul error");
+        Assert.assertTrue(lmul(100L, 100L) == 10000);
     }
 }
