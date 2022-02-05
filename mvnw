@@ -45,7 +45,7 @@ if [ -z "$MAVEN_SKIP_RC" ] ; then
   fi
 
 fi
-JAVA_HOME=/Users/zifeihan/program/zulu-11.jdk
+
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false;
 darwin=false;
