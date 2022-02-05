@@ -1,4 +1,4 @@
-package cn.ac.iscase.openjdk;
+package cn.ac.iscas.openjdk;
 
 import org.junit.Test;
 

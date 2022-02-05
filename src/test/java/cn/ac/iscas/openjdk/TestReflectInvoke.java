@@ -1,4 +1,4 @@
-package cn.ac.iscase.openjdk;
+package cn.ac.iscas.openjdk;
 
 import java.lang.reflect.Method;
 import org.junit.Assert;

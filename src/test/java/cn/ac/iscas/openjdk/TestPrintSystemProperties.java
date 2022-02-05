@@ -1,13 +1,13 @@
-package cn.ac.iscase.openjdk;
+package cn.ac.iscas.openjdk;
 
 import java.util.Enumeration;
 import java.util.Properties;
 import org.junit.Test;
 
-public class PrintSystemInfo {
+public class TestPrintSystemProperties {
 
     @Test
-    public void printSystemProperties() {
+    public void testPrintSystemProperties() {
         final Properties properties = System.getProperties();
         final Enumeration<Object> keys = properties.keys();
         while (keys.hasMoreElements()) {
