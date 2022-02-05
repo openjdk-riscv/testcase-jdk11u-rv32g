@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export JAVA_HOME=
+export JAVA_HOME=/Users/zifeihan/program/zulu-11.jdk
 echo "JAVA_HOME:" ${JAVA_HOME}
 
-bash ./mvnw test
+bash ./mvnw clean test
