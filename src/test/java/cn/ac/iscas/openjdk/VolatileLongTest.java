@@ -1,5 +1,6 @@
 package cn.ac.iscas.openjdk;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class VolatileLongTest {
@@ -17,7 +18,7 @@ public class VolatileLongTest {
                     long peerLong = peer.myLong;
                     if ((peerLong >> 32) != (peerLong & 0xFFFF)) {
                         System.out.println("value not consistent: " + Long.toHexString(peerLong));
-                        System.out.println("i: " + i);
+                        Assert.assertEquals((peerLong >> 32), (peerLong & 0xFFFF));
                         stop = true;
                     }
                 }
