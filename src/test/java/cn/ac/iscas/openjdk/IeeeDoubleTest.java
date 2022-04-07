@@ -7,10 +7,6 @@ import org.junit.Test;
 
 /**
  * IeeeDouble tests
- *
- * @test
- * @modules jdk.scripting.nashorn/jdk.nashorn.internal.runtime.doubleconv:open
- * @run testng jdk.nashorn.internal.runtime.doubleconv.test.IeeeDoubleTest
  */
 @SuppressWarnings({"unchecked", "javadoc"})
 public class IeeeDoubleTest {
@@ -45,7 +41,7 @@ public class IeeeDoubleTest {
     @Test
     public void test() throws InvocationTargetException, IllegalAccessException {
         final double v = Double.longBitsToDouble(kInfinity);
-        System.out.println(  "v:"+v);
+        System.out.println("v:"+v);
         System.out.println("doubleToLong:"+ doubleToLong.invoke(null, v));
         Assert.assertEquals(doubleToLong.invoke(null, v), 9218868437227405312L);
     }
