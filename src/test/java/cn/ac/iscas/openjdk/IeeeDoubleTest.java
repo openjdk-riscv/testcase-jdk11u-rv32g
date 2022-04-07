@@ -35,13 +35,17 @@ public class IeeeDoubleTest {
     }
 
     // We assume that doubles and long have the same endianness.
-    static long doubleToLong(final double d)   { return Double.doubleToRawLongBits(d); }
-    static double longToDouble(final long d64) { return Double.longBitsToDouble(d64); }
+    static long doubleToLong(final double d)   {
+        System.out.println("before:"+ d);
+        long l = Double.doubleToRawLongBits(d);
+        System.out.println("after:"+ l);
+        return l;
+    }
 
     @Test
     public void test() throws InvocationTargetException, IllegalAccessException {
         final double v = Double.longBitsToDouble(kInfinity);
-        System.out.println("v:"+v);
+        System.out.println(  "v:"+v);
         System.out.println("doubleToLong:"+ doubleToLong.invoke(null, v));
         Assert.assertEquals(doubleToLong.invoke(null, v), 9218868437227405312L);
     }
