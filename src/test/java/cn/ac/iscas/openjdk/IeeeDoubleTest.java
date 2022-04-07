@@ -21,7 +21,7 @@ public class IeeeDoubleTest {
 
     static {
         try {
-            final Class<?> IeeeDouble = Class.forName("cn.ac.iscas.openjdk.DoubleTest");
+            final Class<?> IeeeDouble = Class.forName("cn.ac.iscas.openjdk.IeeeDoubleTest");
             doubleToLong = method(IeeeDouble, "doubleToLong", double.class);
         } catch (final Exception e) {
             throw new RuntimeException(e);
@@ -33,6 +33,10 @@ public class IeeeDoubleTest {
         m.setAccessible(true);
         return m;
     }
+
+    // We assume that doubles and long have the same endianness.
+    static long doubleToLong(final double d)   { return Double.doubleToRawLongBits(d); }
+    static double longToDouble(final long d64) { return Double.longBitsToDouble(d64); }
 
     @Test
     public void test() throws InvocationTargetException, IllegalAccessException {
