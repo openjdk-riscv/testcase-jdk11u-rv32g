@@ -1,11 +1,13 @@
 package cn.ac.iscas.openjdk;
 
+import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class VolatileLongTest {
     static final long timeout = 1000;
     static volatile boolean stop = false;
+    static volatile boolean has_exception = false;
 
     class MyThread extends Thread {
         volatile long myLong = 0;
@@ -18,8 +20,9 @@ public class VolatileLongTest {
                     long peerLong = peer.myLong;
                     if ((peerLong >> 32) != (peerLong & 0xFFFF)) {
                         System.out.println("value not consistent: " + Long.toHexString(peerLong));
-                        Assert.assertEquals((peerLong >> 32), (peerLong & 0xFFFF));
+                        has_exception = true;
                         stop = true;
+                        break;
                     }
                 }
                 if (System.currentTimeMillis() - startTime >= timeout) { stop = true; }
@@ -43,6 +46,14 @@ public class VolatileLongTest {
         try {
             thread1.join();
             thread2.join();
-        } catch (InterruptedException e) {}
+            while (true != stop) {
+                TimeUnit.SECONDS.sleep(1);
+            }
+            if (has_exception) {
+                Assert.assertTrue("VolatileLongTest test run failed.", true);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
