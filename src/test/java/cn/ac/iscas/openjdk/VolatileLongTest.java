@@ -50,7 +50,7 @@ public class VolatileLongTest {
                 TimeUnit.SECONDS.sleep(1);
             }
             if (has_exception) {
-                Assert.assertTrue("VolatileLongTest test run failed.", true);
+                Assert.assertTrue("VolatileLongTest test run failed.", false);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
